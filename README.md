@@ -41,7 +41,7 @@ Note: The centroid shift prediction needs the relative permittivity value as one
 
 ### 1_1 Define a customized prediction set for relative permittivity
 
-You should create a `.xlsx` file named `c_pounds.xlsx`, in which the compositions that are of interest are listed in the first column with the header "`Composition`".
+You should create a `.xlsx` file named `c_pounds.xlsx`, in which the compositions that you want to predict are listed in the first column with the header "`Composition`".
 
 There is one [example of customized dataset](/examples) in the repository:`examples/c_pounds.xlsx`.
 
