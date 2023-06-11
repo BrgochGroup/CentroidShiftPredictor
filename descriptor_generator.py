@@ -6,14 +6,13 @@ Created on Fri May  8 22:00:41 2020
 """
 
 #import general python package/ read in compounds list
-import pandas as pd 
-df = pd.read_excel(r'c_pounds.xlsx')   
-df.head()
-df.dtypes
+import pandas as pd
 import numpy as np
-import pymatgen as mg
-import matplotlib.pyplot as plt
-from statistics import mean
+from pymatgen.core.composition import Composition
+
+df = pd.read_excel(r'c_pounds.xlsx')
+
+
 class Vectorize_Formula:
 
     def __init__(self):
@@ -27,8 +26,8 @@ class Vectorize_Formula:
 
     def get_features(self, formula):
         try:
-            fractional_composition = mg.Composition(formula).fractional_composition.as_dict()
-            element_composition = mg.Composition(formula).element_composition.as_dict()
+            fractional_composition = Composition(formula).fractional_composition.as_dict()
+            element_composition = Composition(formula).element_composition.as_dict()
             avg_feature = np.zeros(len(self.element_df.iloc[0]))
             std_feature = np.zeros(len(self.element_df.iloc[0]))
             for key in fractional_composition:
