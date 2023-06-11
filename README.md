@@ -56,7 +56,7 @@ python descriptor_generator.py
 You also need to append another 13 structural descriptors to the compositional descriptors:
 - space group number
 - unit cell volume (nm<sup>3</sup>)
-- density (Mg/m<sup>3</sup>)
+- density (g/cm<sup>3</sup>)
 - *a*/*b*
 - *b*/*c*
 - *c*/*a*
