@@ -24,7 +24,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.1,random_s
 xgb_model = xgb.XGBRegressor(max_depth=3, learning_rate=0.15, n_estimators=50, verbosity=1, objective='reg:squarederror',
                              booster='gbtree', tree_method='auto', n_jobs=1, gamma=0.0001, min_child_weight=8,max_delta_step=0,
                              subsample=1, colsample_bytree=1, colsample_bylevel=0.9, colsample_bynode=1, reg_alpha=0,
-                             reg_lambda=4, scale_pos_weight=1, base_score=0.6, random_state=15, missing=None,
+                             reg_lambda=4, scale_pos_weight=1, base_score=0.6, random_state=15,
                              num_parallel_tree=1, importance_type='gain', eval_metric='rmse',nthread=4).fit(X_train,Y_train)
 
 # Prediction
