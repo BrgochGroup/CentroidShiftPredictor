@@ -95,6 +95,20 @@ You should create a `.xlsx` file named `to_predict_centroid_shift.xlsx` in the f
 
 There is one [example of customized dataset](/examples) in the repository:`examples/to_predict_centroid_shift.xlsx`.
 
+#### Feature Description
+- `Condensation` is the ratio between the number of anions and the number of cations contained in the 
+  chemical formula. For example, BaF$_2$ would be: 2/1 = 2.
+- R$_m$ is the ionic radius of the metal which is going to be substituted by Ce$^{3+}$.
+- The average cation electronegativity is for all cations present in the material, and the average 
+  anion polarizability is for all anions present in the material (not just those coordinating the 
+  substitution site).
+  
+For the anion polarizability, the following values were used:
+
+| F | Cl | Br | I | O | S | Se | N |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 0.634 | 2.2 | 3.1 | 5 | 0.793 | 2.9 | 3.8 | 1.1 |
+
 ### 2_2 Predict centroid shift
 Before getting a prediction, you will need to:
 
